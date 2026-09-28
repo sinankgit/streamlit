@@ -239,6 +239,10 @@ for word, meaning in words_for_day.items():
         st.subheader(word)
         st.write(f"*{meaning}*")
         
+        # Generates a dynamic URL to the Cambridge Dictionary
+        dict_url = f"https://dictionary.cambridge.org/dictionary/english/{word.lower()}"
+        st.markdown(f"[📖 See examples & pronunciation]({dict_url})")
+        
     with col2:
         # Initialize session state for the checkbox if it doesn't exist
         if word not in st.session_state:
